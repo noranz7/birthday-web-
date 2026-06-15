@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دراكن</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Tahoma,sans-serif;
+}
+
+body{
+    background:#0b141a;
+}
+
+.header{
+    background:#202c33;
+    color:white;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.chat{
+    max-width:800px;
+    margin:auto;
+    padding:20px;
+}
+
+.msg{
+    display:none;
+    margin:10px 0;
+    clear:both;
+}
+
+.left,.right{
+    max-width:75%;
+    padding:10px 14px;
+    border-radius:12px;
+    color:white;
+    line-height:1.8;
+}
+
+.left{
+    float:left;
+    background:#202c33;
+}
+
+.right{
+    float:right;
+    background:#005c4b;
+}
+
+.name{
+    font-size:12px;
+    opacity:.7;
+    margin-bottom:4px;
+}
+
+.time{
+    font-size:11px;
+    opacity:.6;
+    margin-top:4px;
+}
+
+button{
+    display:block;
+    margin:30px auto;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#25d366;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.final{
+    white-space:pre-line;
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+💚 دردشة
+</div>
+
+<div class="chat">
+
+<div class="msg">
+<div class="left">
+<div class="name">دراكن</div>
+أيوة؟
+<div class="time">11:01 PM</div>
+</div>
+</div>
+
+<div class="msg">
+<div class="right">
+<div class="name">مريم</div>
+عندي حاجة عايزة أقولها.
+<div class="time">11:01 PM</div>
+</div>
+</div>
+
+<div class="msg">
+<div class="left">
+<div class="name">دراكن</div>
+قولي.
+<div class="time">11:02 PM</div>
+</div>
+</div>
+
+<div class="msg">
+<div class="right">
+<div class="name">مريم</div>
+فاكر أول مرة اتكلمنا؟
+<div class="time">11:02 PM</div>
+</div>
+</div>
+
+<div class="msg">
+<div class="left">
+<div class="name">دراكن</div>
+يمكن 😭
+<div class="time">11:02 PM</div>
+</div>
+</div>
+
+<div class="msg">
+<div class="right">
+<div class="name">مريم</div>
+طب استنى... عندي رسالة أطول بكتير.
+<div class="time">11:03 PM</div>
+</div>
+</div>
+
+<div class="msg">
+<div class="right final">
+<div class="name">مريم</div>
+
+🎂 كل سنه وانت طيب يا دراكن، عقبال مليون سنه ❤️
+
+أنا بجد بحبك أوي، وبجد إنت أكتر حد ساعدني ووقف معايا. بحس إننا شبه بعض أوي، وبجد إنت أحسن ولد يمكن عرفته في حياتي.
+
+وبحب لما الناس تمدح علاقتنا أوي. كنت أعرفك من سنة، بس متقربناش غير في شهر 10، وكانت أحلى صدفة.
+
+ولسه فاكرة الصورة بتاعت فضيحة مريم المصرية اللي بعتها وفكرتها، أنا بجد هعيط 😭
+
+ولسه فاكرة فيديو التصبيعة، وكل مرة بنعمل مقلب إن إحنا بنشرد بعض والناس حرفيًا بتصدق 😭
+
+بجد معرفش مين ممكن يكرهك، مع إنك من أحسن الناس اللي عرفتها، وعمري ما هندم إننا عرفنا بعض.
+
+ومش عاوزة أيامنا دي تبقى مجرد ذكريات، عشان حرفيًا دي من أحسن أيام حياتي.
+
+ سنة وإنت طيب يا دراكن 🎉🤍
+
+<div class="time">12:00 AM</div>
+</div>
+</div>
+
+<button onclick="showNext()">التالي</button>
+
+</div>
+
+<script>
+let current = 0;
+const msgs = document.querySelectorAll('.msg');
+
+function showNext(){
+    if(current < msgs.length){
+        msgs[current].style.display = 'block';
+
+        msgs[current].scrollIntoView({
+            behavior:'smooth',
+            block:'end'
+        });
+
+        current++;
+    }
+
+    if(current >= msgs.length){
+        document.querySelector('button').style.display='none';
+    }
+}
+</script>
+
+</body>
+</html>
